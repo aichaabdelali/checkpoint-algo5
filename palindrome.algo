@@ -1,0 +1,10 @@
+FUNCTION is_palindrome(str : STRING[30], start,end : INTEGER) : BOOLEAN
+BEGIN
+    IF (start >= end) THEN
+        RETURN TRUE;
+    ELSE_IF (str[start] = str[end]) THEN
+        RETURN is_palindrome(str, start +1, end -1);
+    ELSE
+        RETURN FALSE
+    END_IF
+END
